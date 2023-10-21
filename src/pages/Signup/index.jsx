@@ -3,9 +3,10 @@ import styles from "./styles.module.css";
 
 
 function Signup() {
+	const URL = "https://ideabox-server.onrender.com";
 	const googleAuth = () => {
 		window.open(
-			`${process.env.REACT_APP_API_URL}/auth/google/callback`,
+			`${URL}/auth/google/callback`,
 			"_self"
 		);
 	};

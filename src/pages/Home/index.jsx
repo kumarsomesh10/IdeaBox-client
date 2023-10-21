@@ -4,13 +4,13 @@ import Note from "../../components/Note"
 import { useEffect, useState } from "react";
 
 function Home(userDetails) {
-	// const URL = "https://ideabox-api-dlu6.onrender.com";
-	const URL = "http://localhost:8080";
+	const URL = "https://ideabox-server.onrender.com";
+	// const URL = "http://localhost:8080";
 	const user = userDetails.user;
 	const userKey = user.sub;
 	// console.log(userKey);
 	const logout = () => {
-		window.open(`${process.env.REACT_APP_API_URL}/auth/logout`, "_self");
+		window.open(`${URL}/auth/logout`, "_self");
 	};
 
 	// console.log(user);

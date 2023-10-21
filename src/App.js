@@ -8,11 +8,12 @@ import Header from "./components/Header";
 import "./App.css";
 
 function App() {
+  const URL = "https://ideabox-server.onrender.com";
   const [user, setUser] = useState(null);
 
   const getUser = async () => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/auth/login/success`;
+      const url = `${URL}/auth/login/success`;
       const { data } = await axios.get(url, { withCredentials: true });
       setUser(data.user._json);
       // console.log(data.user._json);
